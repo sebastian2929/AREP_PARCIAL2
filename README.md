@@ -6,11 +6,26 @@ Este proyecto implementa un sistema de microservicios que proporciona dos servic
  
 
 ## Logrado en el parcial
-
+- Se implemento MathService
+- Se creo un Proxy
 - Se logro correr en local
 - No se pudo implementar en nube
 
-
+## Como correr
+- Primero
+```
+git clone https://github.com/sebastian2929/AREP_PARCIAL2.git
+```
+- Segundo
+```
+mvn clean install
+```
+- Tercero
+```
+mvn spring-boot:run 
+```
+- Cuarto
+ingresar a ``` localhost:8080 ```
 ## Arquitectura del Sistema
 ![image](https://github.com/user-attachments/assets/52dc3de0-fc14-433c-9937-03ccea6c69f9)
 
