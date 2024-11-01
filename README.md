@@ -10,6 +10,8 @@ Este proyecto implementa un sistema de microservicios que proporciona dos servic
 - Se creo un Proxy
 - Se logro correr en local
 - No se pudo implementar en nube
+![image](https://github.com/user-attachments/assets/37894295-f72f-4c35-a255-b116460f4177)
+![image](https://github.com/user-attachments/assets/483370ab-19cc-4f03-86d8-ddc521da005a)
 
 ## Como correr
 - Primero
