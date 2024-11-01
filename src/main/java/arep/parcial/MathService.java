@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import java.util.Arrays;
 
 @RestController
-public class MathServices {
+public class MathService {
 
     @GetMapping("/linearsearch")
     public ResponseEntity<String> linearSearch(@RequestParam String list, @RequestParam String value) {

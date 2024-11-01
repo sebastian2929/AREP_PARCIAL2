@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Service</title>
     <script>
         async function search(type) {
             const list = document.getElementById('list').value;
             const value = document.getElementById('value').value;
-            const response = await fetch(`/proxy/${type}?list=${list}&value=${value}`);
-            const data = await response.json();
-            document.getElementById('result').innerText = JSON.stringify(data);
+            try {
+                const response = await fetch(`/proxy/${type}?list=${list}&value=${value}`);
+                if (!response.ok) {
+                    // Maneja el error de respuesta
+                    const errorText = await response.text(); // Lee la respuesta como texto
+                    throw new Error(errorText); // Lanza un error con el texto de la respuesta
+                }
+                const data = await response.json(); // Asegúrate de que esto se ejecute solo si response.ok
+                document.getElementById('result').innerText = JSON.stringify(data);
+            } catch (error) {
+                document.getElementById('result').innerText = `Error: ${error.message}`;
+            }
         }
     </script>
 </head>
